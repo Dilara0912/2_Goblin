@@ -27,7 +27,7 @@ export default class TraversingGoblin {
       const cell = document.createElement('div');
       cell.classList.add('cell');//Добавляем класс для ячейки - будет: class="cell"
       cell.dataset.id = i;//Добавляем data-атрибут для этой же ячейки - будет: data-id="0"
-      gameBoard.appendChild(cell);//Добавляем узел в DOM в конец списка дочерних
+      gameBoard.append(cell);//Добавляем узел в DOM в конец списка дочерних
     }
   }
 
@@ -52,7 +52,7 @@ export default class TraversingGoblin {
 
     const targetCell = document.querySelector(`.cell[data-id='${this.currentPosition}']`); //ищем клетку по data-id="this.currentPosition"
     
-    targetCell.appendChild(this.goblin);// Перемещаем гнома
+    targetCell.append(this.goblin);// Перемещаем гнома
   }
 
   startGame(){
